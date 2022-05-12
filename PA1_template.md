@@ -6,7 +6,7 @@ Reproducible Research Project 1 - Elizabeth Lundeen
 
 
 ```r
-setwd("C:/Users/yxj4/OneDrive - CDC/+My_Documents/CDC/1 DDT/Data Modernization/Coursera/Hopkins Data Science Specialization/5 Reproducible Research/3 Course Project 1")
+setwd("C:/Users/yxj4/OneDrive - CDC/+My_Documents/CDC/1 DDT/Data Modernization/Coursera/Hopkins Data Science Specialization/5 Reproducible Research/3 Course Project 1/RepData_PeerAssessment1")
 activity <- read.csv("activity.csv")
 head(activity,10)
 ```
@@ -52,7 +52,7 @@ totalsteps <- aggregate(steps ~ date, activity, sum)
 qplot(steps, data = totalsteps, bins=8, xlab = "Total Number of Steps", ylab = "Frequency, Number of Days", main = "Histogram of Total Number of Steps Per Day")
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
 
 ```r
 meansteps <- mean(totalsteps$steps, na.rm=TRUE)
@@ -96,7 +96,7 @@ str(intervalsteps)
 plot(intervalsteps,type="l", main = "Average Steps Per Interval")
 ```
 
-![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
 
 ```r
 intervalsteps[which.max(intervalsteps$steps),]
@@ -151,7 +151,7 @@ totalsteps2 <- aggregate(steps ~ date, activity2, sum)
 qplot(steps, data = totalsteps2, bins=11, xlab = "Total Number of Steps", ylab = "Frequency, Number of Days", main = "Histogram of Total Number of Steps Per Day (No NAs)")
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png)
+![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png)
 
 ```r
 meansteps2 <- mean(totalsteps2$steps, na.rm=TRUE)
@@ -204,5 +204,4 @@ str(averagesteps)
 xyplot(steps ~ interval | dayofweek, data = averagesteps, type="l", layout = c(1, 2), main = "Average Steps/Interval, Weekdays and Weekends")
 ```
 
-![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png)
-
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)

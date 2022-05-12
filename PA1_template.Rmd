@@ -5,7 +5,7 @@ Reproducible Research Project 1 - Elizabeth Lundeen
 **Step 1: Code for reading in the data set and/or processing the data (exploring the data).**
 
 ```{r, echo=TRUE}
-setwd("C:/Users/yxj4/OneDrive - CDC/+My_Documents/CDC/1 DDT/Data Modernization/Coursera/Hopkins Data Science Specialization/5 Reproducible Research/3 Course Project 1")
+setwd("C:/Users/yxj4/OneDrive - CDC/+My_Documents/CDC/1 DDT/Data Modernization/Coursera/Hopkins Data Science Specialization/5 Reproducible Research/3 Course Project 1/RepData_PeerAssessment1")
 activity <- read.csv("activity.csv")
 head(activity,10)
 str(activity)
@@ -97,5 +97,5 @@ table(activity2$dayofweek)
 averagesteps <- aggregate(steps ~ interval+dayofweek, data = activity2, mean)
 str(averagesteps)
 xyplot(steps ~ interval | dayofweek, data = averagesteps, type="l", layout = c(1, 2), main = "Average Steps/Interval, Weekdays and Weekends")
-```
 
+```
